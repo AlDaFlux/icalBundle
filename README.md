@@ -14,16 +14,9 @@ use of the library: <https://github.com/jasvrcek/ICS>
 Add bundle to your project:
 
 ```bash
-composer require welp/ical-bundle
-```
+#composer require welp/ical-bundle
+composer require aldaflux/ical-bundle
 
-Add `Welp\IcalBundle\WelpIcalBundle` to your `AppKernel.php`:
-
-```php
-$bundles = [
-    // ...
-    new Welp\IcalBundle\WelpIcalBundle(),
-];
 ```
 
 ## Configuration
@@ -31,7 +24,7 @@ $bundles = [
 In your `config.yml`:
 
 ```yaml
-welp_ical:
+aldaflux_ical:
     default_timezone: "Europe/Paris"
     default_prodid: "-//WelpIcalBundle//Calendar App//FR"
 ```
@@ -43,13 +36,15 @@ welp_ical:
 
     ...
 
+
+	use Aldaflux\IcalBundle\Factory\Factory;
+
     /**
      * Generate calendar event ICAL for welpAction
      * @Config\Route("/ical", name="app_ical")
      */
-    public function icalAction()
+    public function icalAction(Factory $icalFactory)
     {
-        $icalFactory = $this->get('welp_ical.factory');
 
         //Create a calendar
         $calendar = $icalFactory->createCalendar();
@@ -84,7 +79,7 @@ welp_ical:
             ->addEvent($eventTwo);
 
         $headers = array();
-        $calendarResponse = new Welp\IcalBundle\Response\CalendarResponse($calendar, 200, $headers);
+        $calendarResponse = new Aldaflux\IcalBundle\Response\CalendarResponse($calendar, 200, $headers);
 
         return $calendarResponse;
 
