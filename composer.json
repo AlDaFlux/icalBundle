@@ -1,7 +1,7 @@
 {
     "name": "aldaflux/ical-bundle",
     "description": "Symfony Bundle to manage .ics iCal file (creating and eventually reading), forked for synfony6",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "type": "symfony-bundle",
     "homepage": "https://github.com/welpdev/icalBundle",
     "license": "MIT",
