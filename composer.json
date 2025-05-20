@@ -25,7 +25,8 @@
     },
     "require": {
         "php": ">=8.0",
-        "jsvrcek/ics": "^0.8"
+        "jsvrcek/ics": "^0.8",
+        "symfony/symfony": ">=7.1"
     },
     "config": {
         "bin-dir": "bin"
