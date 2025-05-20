@@ -1,0 +1,33 @@
+{
+    "name": "aldaflux/ical-bundle",
+    "description": "Symfony Bundle to manage .ics iCal file (creating and eventually reading), forked for synfony 6",
+    "type": "symfony-bundle",
+    "homepage": "https://github.com/welpdev/icalBundle",
+    "license": "MIT",
+    "keywords": [
+        "Symfony",
+        "ical",
+        "ics",
+        "calendar",
+        "icalendar",
+        "welp"
+    ],
+    "authors": [
+        {
+            "name": "Titouan BENOIT",
+            "email": "titouan@welp.today"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Welp\\IcalBundle\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "jsvrcek/ics": "^0.8"
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
